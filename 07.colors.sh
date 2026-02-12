@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ USERID -ne 0 ] ; then
+if [ $USERID -ne 0 ] ; then
 echo -e "$R ERROR:: please run this commnad as root user $N"
 fi
 
@@ -20,14 +20,14 @@ VALIDATE(){
 
 dnf list installed mysql
 if [ $? -ne 0 ] ; then
-dnf install mysql
+dnf install mysql -y
 VALIDATE $? "MYSQL"
 else
-echo -e"$y mysql already exist $N"
+echo -e"$Y mysql already exist $N"
 fi
 
 dnf list installed nginx
-if [$? -ne 0 ] ; then
+if [ $? -ne 0 ] ; then
 dnf install nginx
 VALIDATE $? "NGINX"
 else
@@ -39,6 +39,6 @@ if [ $? -ne 0 ] ; then
 dnf install python3 -y
 VALIDATE $? "PYTHON3"
 else
-echo -e "$Y nginx already installed $N"
+echo -e "$Y pyhon already installed $N"
 fi
 
