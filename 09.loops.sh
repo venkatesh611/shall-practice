@@ -8,7 +8,7 @@ done
 
 LIST=("a" "b" "c" "d" "e" "f" "g" "h")
 
-for i in  $LIST
+for i in  ${LIST[@]}
 do
   echo $i
 done
