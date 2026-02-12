@@ -43,3 +43,4 @@ echo "The exit status of the last command (echo command above) was: $?"
 echo "Your username is: $USER"
 echo "Your home directory is: $HOME"
 
+
