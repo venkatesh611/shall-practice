@@ -7,6 +7,7 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ] ; then
 echo -e "$R ERROR:: please run this commnad as root user $N"
+exit 1
 fi
 
 VALIDATE(){
